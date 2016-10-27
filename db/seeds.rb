@@ -5,23 +5,26 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-tables = ['users']
+p 'Hello from seeds!!'
+# tables = ['users']
 
-tables.each do |table|
-	ActiveRecord::Base.connection.execute("TRUNCATE #{table} RESTART IDENTITY")
-end
+# tables.each do |table|
+# 	ActiveRecord::Base.connection.execute("TRUNCATE #{table} RESTART IDENTITY")
+# end
 
 User.destroy_all
 
 User.create(
 	name: 'Ashley', 
 	email: 'ashley@ga.com',
-	password: 'test'
+	password_digest: 'test'
 	)
+
 
 10.times do
 	User.create(
 		name: FFaker::Name.name,
-		email: FFake::Email.email,
-		password: 'test'
+		email: FFaker::Internet.email,
+		password_digest: 'test'
 		)
+end
