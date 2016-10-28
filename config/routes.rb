@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :users
 	resources :users
+	resources :dashboard
 
-	get '/login', to: 'sessions#new'
-	post '/login', to: 'sessions#create'
-	get '/logout', to: 'sessions#destroy'
+	root to: "home#index"
 
-	get '/signup', to: 'users#new'
-	post '/users', to: 'users#create'
 end

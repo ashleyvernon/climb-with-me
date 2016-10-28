@@ -17,7 +17,7 @@ User.destroy_all
 User.create(
 	name: 'Ashley', 
 	email: 'ashley@ga.com',
-	password_digest: 'test'
+	password: '123456'
 	)
 
 
@@ -25,6 +25,6 @@ User.create(
 	User.create(
 		name: FFaker::Name.name,
 		email: FFaker::Internet.email,
-		password_digest: 'test'
+		password: '123456'
 		)
 end
