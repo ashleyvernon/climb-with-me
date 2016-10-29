@@ -3,7 +3,7 @@ class DashboardController < ApplicationController
 	
 	def index
 		@users = User.all
-		@user = User.find_by_id(user_id)
+		@user = current_user
 	end
 
 	def new
