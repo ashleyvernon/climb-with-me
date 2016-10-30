@@ -1,3 +1,26 @@
+<!--  <script type="text/javascript">
+  function populate(s1, s2){
+    var s1 = document.getElementById(s1); 
+    var s2 = document.getElementById(s2);
+    s2.innerHTML = "";
+    if(s1.value == "top-rope") {
+      var optionArray = ["|", "5.8|5.8", "5.9|5.9","5.10a|5.10a","5.10b|5.10b","5.10c|5.10c","5.10d|5.10d", "5.11a|5.11a", "5.11b|5.11b", "5.11c|5.11c", "5.11d|5.11d", "5.12a|5.12a", "5.12b|5.12b", "5.12c|5.12c", "5.12d|5.12d", "5.13a|5.13a", "5.13b|5.13b"];
+    }
+    if(s2.value == "lead") {
+      var optionArray = ["|", "5.8|5.8", "5.9|5.9","5.10a|5.10a","5.10b|5.10b","5.10c|5.10c","5.10d|5.10d", "5.11a|5.11a", "5.11b|5.11b", "5.11c|5.11c", "5.11d|5.11d", "5.12a|5.12a", "5.12b|5.12b", "5.12c|5.12c", "5.12d|5.12d", "5.13a|5.13a", "5.13b|5.13b"];
+    } 
+    if(s3.value == "boulder") {
+      var optionArray = ["|", "v0|v0", "v1|v1","v2|v2", "v3|v3", "v4|v4","v5|v5", "v6|v6", "v7|v7", "v8|v8"];
+    }
+    for(var option in optionArray){
+      var pair = optionArray[option].split("|");
+      var newOption = document.createElement("option");
+      newOption.value = pair[0];
+      newOption.innerHTML = pair[1];
+      s2.options.add(newOption);
+    }
+  }
+</script> -->
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -35,22 +58,91 @@
     <%= f.submit "Update" %>
   </div>
 <% end %>
-  <form action="#">
-    <p>
-      <input name="group1" type="radio" id="test1" />
-      <label for="test1">Planet Granite</label>
-    </p>
-    <p>
-      <input name="group1" type="radio" id="test2" />
-      <label for="test2">Dogpatch</label>
-    </p>
-    <p>
-      <input class="with-gap" name="group1" type="radio" id="test3"  />
-      <label for="test3">Mission Cliffs</label>
-    </p>
-  </form>
-<!-- <h3>Cancel my account</h3>
+<div class="container">
+  <div class="row">
+    <form action="#">
+      <p>
+        <input name="group1" type="radio" id="test1" />
+        <label for="test1">Planet Granite</label>
+      </p>
+      <p>
+        <input name="group1" type="radio" id="test2" />
+        <label for="test2">Dogpatch</label>
+      </p>
+      <p>
+        <input name="group1" type="radio" id="test3"  />
+        <label for="test3">Mission Cliffs</label>
+      </p>
+    </form>
+  </div>
+  <br />
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
- -->
+  <div class="row">
+    <div class="col-lg-4">
+    <h3>Choose Climb and Level Skill</h3>
+    <hr/>
+      <!-- <select class="browser-default" id="slct1" name="slct1" onchange="populate(this.id, 'slct2')"> -->
+<!--       <select class="browser-default" id="slct1" name="slct1">
+        <option value="" disabled selected>Choose your option</option>
+        <option value="top-rope">Top Rope</option>
+        <option value="lead">Lead</option>
+        <option value="boulder">Boulder</option>
+      </select>
+    <hr /> -->    
+    <div class="col-lg-4">
+    <h3>Top Rope</h3>
+      <select id="slct1" class="browser-default" onchange="populate(this.id, '">
+        <option value="" disabled selected>Choose your option</option>
+        <option value="1">5.8</option>
+        <option value="2">5.9</option>
+        <option value="3">5.10a</option>
+        <option value="3">5.10b</option>
+        <option value="3">5.10c</option>
+        <option value="3">5.10d</option>
+        <option value="3">5.11a</option>
+        <option value="3">5.11b</option>
+        <option value="3">5.11c</option>
+        <option value="3">5.11d</option>
+      </select>
+    </div>
+  </div>
+</div>
+  <div class="row">
+    <div class="col-lg-4">
+    <h3>Lead</h3>
+      <select id="slct1" class="browser-default" onchange="populate(this.id, '">
+        <option value="" disabled selected>Choose your option</option>
+        <option value="1">5.8</option>
+        <option value="2">5.9</option>
+        <option value="3">5.10a</option>
+        <option value="3">5.10b</option>
+        <option value="3">5.10c</option>
+        <option value="3">5.10d</option>
+        <option value="3">5.11a</option>
+        <option value="3">5.11b</option>
+        <option value="3">5.11c</option>
+        <option value="3">5.11d</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-4">
+    <h3>Boulder</h3>
+      <select class="browser-default">
+        <option value="" disabled selected>Choose your option</option>
+        <option value="1">v0</option>
+        <option value="2">v1</option>
+        <option value="3">v2</option>
+        <option value="3">v3</option>
+        <option value="3">v4</option>
+        <option value="3">v5</option>
+        <option value="3">v6</option>
+        <option value="3">v7</option>
+        <option value="3">v8</option>
+        <option value="3">v9</option>
+      </select>
+    </div>
+  </div>
+</div>
+
 <%= link_to "Back", :back %>

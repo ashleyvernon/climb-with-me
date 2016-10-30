@@ -1,8 +1,12 @@
 <div class="container">
 	<div class="row valign-wrapper">
 		<div class="col-md-12">
-		<center><h1>Find Yourself a Climbing Buddy!</h1></center>
-
+		<h1>Find Yourself a Climbing Buddy!</h1>
+			<% @users.each do |user| %>
+			<ul>
+		        <%= link_to user.name, user %>
+		    </ul>
+			<% end %>
 
 		</div>
 	</div>
