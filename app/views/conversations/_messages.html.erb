@@ -1,5 +1,4 @@
 <% @receipts.each do |receipt| %>
-    <% message = receipt.message %>
     <div class="media">
       <div class="media-left">
         <!-- user avators can go here -->
@@ -9,11 +8,10 @@
       </div>
       <div class="media-body">
         <h4 class="media-heading">
-          <%= message.sender.name %> <br>
-          <small><b>Subject: </b><%= message.subject %></small><br>
-          <small><b>Date: </b><%=  message.created_at.strftime("%A, %b %d, %Y at %I:%M%p") %></small>
-        </h4>
-        <%= message.body %>
+          <%= receipt.subject %> <br>
+          <small><b>Subject: </b><%= receipt.subject %></small><br>
+       </h4>
+
       </div>
     </div>
 <% end %>
