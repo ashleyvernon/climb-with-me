@@ -11,19 +11,23 @@ class ConversationsController < ApplicationController
 	def create
 		# recipient_emails = conversation_params(:recipients).split(',')
 		# recipients = User.where(email: recipient_emails).all
-    	recipients = User.where(id: params['recipients'])
-		@conversation = current_user.send_message(recipients, params[:body], params[:subject]).conversation
+    	@recipients = User.where(id: params['recipients'])
+    	@body = params[:body]
+    	@subject = params[:subject]
+    	p current_user
+		@conversation = current_user.send_message(@recipients, conversation_params[:body], conversation_params[:subject]).conversation
 		p @conversation
 		flash[:success] = "Your message was successfully sent!"
-		redirect_to conversation_path(conversation_id)
-
+		redirect_to conversation_path(@conversation)
 	end
 
 	def show
-		@conversation = current_user.mailbox.conversations.find(params[:id])
-		@receipts = conversation.receipts_for(current_user).order("created_at ASC")
+		@conversation = current_user.mailbox.conversations.all
+
+		@receipts = @conversation.order("created_at ASC")
+		
 		# mark conversation as read
-		conversation.mark_as_read(current_user)
+		# @conversation.mark_as_read(current_user)
 	end
 
 	def reply
@@ -44,14 +48,18 @@ class ConversationsController < ApplicationController
 
 	private
 
-	# def mailbox
- # 		@mailbox ||= current_user.mailbox
-	# end
-
-	def conversation_params
-		params.require(:conversation).permit(:subject, :body,recipients:[])
+	def mailbox
+ 		@mailbox ||= current_user.mailbox
 	end
 
+	def conversation_params
+		params.require(:conversation).permit(:subject, :body, recipients:[])
+	end
+
+
+	def conversation
+        @conversation ||= mailbox.conversations.find(params[:id])
+	end
 	# def message_params
 	# 	params.require(:message).permit(:body, :subject)
 	# end
