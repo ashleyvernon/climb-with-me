@@ -12,8 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require chosen-jquery
 //= require turbolinks
-//= require materialize-sprockets
 //= require_tree .
 
 
@@ -23,3 +23,4 @@ console.log("sanity Check!!!!!")
 $(document).ready(function() {
 	$('select').material_select('destroy');
 });
+
