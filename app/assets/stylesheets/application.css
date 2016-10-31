@@ -11,6 +11,26 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_tree .
+ *= require chosen
  *= require_self
- @import "materialize";
  */
+
+ @import 'bootstrap';
+ @import 'bootstrap.theme';
+
+#navbar-top {
+	margin-bottom: 40px;
+}
+
+.container {
+	padding: 50px;
+}
+
+html {
+	background: url('https://static1.squarespace.com/static/563e619ce4b0d49f21779888/t/5694043ba2bab8c9489788ca/1452540997998/Mountain+Climbers.jpeg?format=1500w') no-repeat fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
