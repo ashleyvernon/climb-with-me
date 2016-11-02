@@ -6,15 +6,36 @@ class DashboardController < ApplicationController
 		@user = current_user
 	end
 
-	def new
-		@user = User.new
-	end
+	# def new
+	# 	@user = User.new
+	# 	p @user
+	# end
 
-	def create 
-		@user = User.create(user_id)
+	# def edit
+	# 	user_id = params[:id]
+	# 	@user = User.find_by_id(user_id)
+	# end
 
-		if user.save
-			redirect_to users_path
+	# def create 
+	# 	@user = User.create(user_params)
+	# 	login(@user)
+	# 	p @user
+	# 	if user.save
+	# 		redirect_to user_registration_path
+	# 	end
+	# end
+
+	def update
+		@user = User.find(params[:id])
+		if @user.update(user_params)
+			redirect_to user_registration_path
 		end
 	end
+	
+	private 
+
+	def user_params
+		params.require(:user).permit(:user_id, :name, :email, :password, :gym)
+	end
+
 end
