@@ -43,6 +43,13 @@ body {
 .nav_link {
 	padding-top: 5px;	
 }
+#community_row {
+    margin-right: -129px;
+    margin-left: 50px;
+}
+#community_title {
+    margin-left: 328px;
+}
 a {
 	color: #b75a33;
 	font-size: 27px;
