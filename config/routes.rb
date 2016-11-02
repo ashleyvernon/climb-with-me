@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 	default_url_options :host => "example.com"
 	
   devise_for :users
-	resources :users
+	resources :users, :controller => 'users'
 	resources :dashboard
 
 	root to: "home#index"
@@ -18,5 +18,6 @@ Rails.application.routes.draw do
 			post :trash
 			post :untrash
 		end
+
 	end
 end
