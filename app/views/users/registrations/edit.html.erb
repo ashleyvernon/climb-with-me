@@ -21,9 +21,11 @@
     }
   }
 </script> -->
+<div class="container">
+  <div class="row">
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+<%= form_for @user, html: { method: :put } do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
@@ -53,96 +55,15 @@
     <%= f.label :current_password %> <i>(current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %>
   </div>
-
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
-<% end %>
-<div class="container">
+  <br/>
   <div class="row">
-    <form action="#">
-      <p>
-        <input name="group1" type="radio" id="test1" />
-        <label for="test1">Planet Granite</label>
-      </p>
-      <p>
-        <input name="group1" type="radio" id="test2" />
-        <label for="test2">Dogpatch</label>
-      </p>
-      <p>
-        <input name="group1" type="radio" id="test3"  />
-        <label for="test3">Mission Cliffs</label>
-      </p>
-    </form>
-  </div>
-  <br />
-
-  <div class="row">
-    <div class="col-lg-4">
-    <h3>Choose Climb and Level Skill</h3>
-    <hr/>
-      <!-- <select class="browser-default" id="slct1" name="slct1" onchange="populate(this.id, 'slct2')"> -->
-<!--       <select class="browser-default" id="slct1" name="slct1">
-        <option value="" disabled selected>Choose your option</option>
-        <option value="top-rope">Top Rope</option>
-        <option value="lead">Lead</option>
-        <option value="boulder">Boulder</option>
-      </select>
-    <hr /> -->    
-    <div class="col-lg-4">
-    <h3>Top Rope</h3>
-      <select id="slct1" class="browser-default" onchange="populate(this.id, '">
-        <option value="" disabled selected>Choose your option</option>
-        <option value="1">5.8</option>
-        <option value="2">5.9</option>
-        <option value="3">5.10a</option>
-        <option value="3">5.10b</option>
-        <option value="3">5.10c</option>
-        <option value="3">5.10d</option>
-        <option value="3">5.11a</option>
-        <option value="3">5.11b</option>
-        <option value="3">5.11c</option>
-        <option value="3">5.11d</option>
-      </select>
+    <div class="actions">
+      <%= f.submit "Update", class: "btn btn-default" %>
     </div>
   </div>
-</div>
-  <div class="row">
-    <div class="col-lg-4">
-    <h3>Lead</h3>
-      <select id="slct1" class="browser-default" onchange="populate(this.id, '">
-        <option value="" disabled selected>Choose your option</option>
-        <option value="1">5.8</option>
-        <option value="2">5.9</option>
-        <option value="3">5.10a</option>
-        <option value="3">5.10b</option>
-        <option value="3">5.10c</option>
-        <option value="3">5.10d</option>
-        <option value="3">5.11a</option>
-        <option value="3">5.11b</option>
-        <option value="3">5.11c</option>
-        <option value="3">5.11d</option>
-      </select>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-4">
-    <h3>Boulder</h3>
-      <select class="browser-default">
-        <option value="" disabled selected>Choose your option</option>
-        <option value="1">v0</option>
-        <option value="2">v1</option>
-        <option value="3">v2</option>
-        <option value="3">v3</option>
-        <option value="3">v4</option>
-        <option value="3">v5</option>
-        <option value="3">v6</option>
-        <option value="3">v7</option>
-        <option value="3">v8</option>
-        <option value="3">v9</option>
-      </select>
-    </div>
-  </div>
-</div>
+  <% end %>
 
 <%= link_to "Back", :back %>
+
+
+
