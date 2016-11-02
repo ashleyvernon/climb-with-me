@@ -43,8 +43,8 @@ class ConversationsController < ApplicationController
 
 
 	def trash
-		# @conversation = mailbox.conversations.find(params[:id])
-		conversation.move_to_trash(current_user)
+		@conversation = current_user.mailbox.conversations.find_by(id: params[:id])
+		@conversation.move_to_trash(current_user)
 		# @conversation = current_user.send_message(@recipients, conversation_params[:body], conversation_params[:subject]).conversation
 		if @conversation
 			flash[:success] = 'The conversation was moved to trash.'
