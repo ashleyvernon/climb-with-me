@@ -2,14 +2,19 @@
     <div class="media">
       <div class="media-left">
         <!-- user avators can go here -->
-        <a href="#">
-          <img class="media-object" src="http://placehold.it/64x64" alt="...">
-        </a>
+
       </div>
       <div class="media-body">
         <h4 class="media-heading">
+
           <%= receipt.subject %> <br>
+          <% @message_id = receipt.id %>
+
+          <%= link_to ' ', trash_conversation_path(@message_id), class: "glyphicon glyphicon-trash", :method => :post, data: {confirm: 'Are you sure?'} %>
+
+      <div class="col-md-8">
           <small><b>Subject: </b><%= receipt.subject %></small><br>
+      </div>
        </h4>
 
       </div>
