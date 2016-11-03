@@ -1,33 +1,11 @@
-<!--  <script type="text/javascript">
-  function populate(s1, s2){
-    var s1 = document.getElementById(s1); 
-    var s2 = document.getElementById(s2);
-    s2.innerHTML = "";
-    if(s1.value == "top-rope") {
-      var optionArray = ["|", "5.8|5.8", "5.9|5.9","5.10a|5.10a","5.10b|5.10b","5.10c|5.10c","5.10d|5.10d", "5.11a|5.11a", "5.11b|5.11b", "5.11c|5.11c", "5.11d|5.11d", "5.12a|5.12a", "5.12b|5.12b", "5.12c|5.12c", "5.12d|5.12d", "5.13a|5.13a", "5.13b|5.13b"];
-    }
-    if(s2.value == "lead") {
-      var optionArray = ["|", "5.8|5.8", "5.9|5.9","5.10a|5.10a","5.10b|5.10b","5.10c|5.10c","5.10d|5.10d", "5.11a|5.11a", "5.11b|5.11b", "5.11c|5.11c", "5.11d|5.11d", "5.12a|5.12a", "5.12b|5.12b", "5.12c|5.12c", "5.12d|5.12d", "5.13a|5.13a", "5.13b|5.13b"];
-    } 
-    if(s3.value == "boulder") {
-      var optionArray = ["|", "v0|v0", "v1|v1","v2|v2", "v3|v3", "v4|v4","v5|v5", "v6|v6", "v7|v7", "v8|v8"];
-    }
-    for(var option in optionArray){
-      var pair = optionArray[option].split("|");
-      var newOption = document.createElement("option");
-      newOption.value = pair[0];
-      newOption.innerHTML = pair[1];
-      s2.options.add(newOption);
-    }
-  }
-</script> -->
 <div class="container">
   <div class="row">
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
-<%= form_for @user, html: { method: :put } do |f| %>
+<%= form_for @user, html: { method: :put, mutlipart: true } do |f| %>
   <%= devise_error_messages! %>
-
+  <%= f.label :avatar %>
+  <%= f.file_field :avatar %>
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>

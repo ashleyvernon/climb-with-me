@@ -27,15 +27,6 @@
 	padding: 80px;
 }
 
-/*
-body {
-		background: url("/images/mountain-climbers.jpg") no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-
-}*/
 .nav {
 	padding-right: 7px;
 }
@@ -43,13 +34,16 @@ body {
 .nav_link {
 	padding-top: 5px;	
 }
+
 #community_row {
     margin-right: -129px;
     margin-left: 50px;
 }
+
 #community_title {
     margin-left: 328px;
 }
+
 a {
 	color: #b75a33;
 	font-size: 27px;
@@ -99,4 +93,24 @@ a {
 	font-family: 'Amatic SC', cursive;
 	font-size: 42px;
     padding-left: 92px;
+}
+
+#conversation_form {
+    margin-left: 400px;
+}
+
+#inbox {
+    padding-top: 50px;
+}
+
+#entire_conversation {
+    padding-top: 50px;
+}
+
+#nav_links {
+	margin-top: 10px;
+}
+
+.routes {
+	text-align: center;
 }
