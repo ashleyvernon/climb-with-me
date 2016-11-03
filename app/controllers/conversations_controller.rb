@@ -13,9 +13,7 @@ class ConversationsController < ApplicationController
     	@recipients = User.where(id: params['recipients'])
     	@body = params[:body]
     	@subject = params[:subject]
-    	p current_user
 		@conversation = current_user.send_message(@recipients, conversation_params[:body], conversation_params[:subject]).conversation
-		p @conversation
 		flash[:success] = "Your message was successfully sent!"
 		redirect_to conversation_path(@conversation)
 	end
@@ -81,9 +79,9 @@ class ConversationsController < ApplicationController
         @conversation ||= mailbox.conversations.all(params[:id])
 	end
 
-	# def message_params
-	# 	params.require(:message).permit(:body, :subject)
-	# end
+	def message_params(*keys)
+		params.require(:message).permit(:body, :subject)
+	end
 
 	
 end
