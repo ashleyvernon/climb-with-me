@@ -21,7 +21,8 @@ User.create(
 	gym: 'Mission Cliffs', 
 	top_rope: '10c',
 	lead: '10a',	
-	boulder: 'v1'
+	boulder: 'v1',
+	image: 'http://i.imgur.com/Oguyg9j.png'
 	)
 User.create(
 	name: 'Chrissy', 
@@ -30,7 +31,8 @@ User.create(
 	gym: 'Dogpatch',
 	top_rope: '10d',
 	lead: '10b',
-	boulder: 'v0'
+	boulder: 'v0',
+	image: 'http://i.imgur.com/Sal4uax.png'
 	)
 User.create(
 	name: 'Oliver', 
@@ -39,7 +41,8 @@ User.create(
 	gym: 'Panet Granite',
 	top_rope: '11b',
 	lead: '10d',
-	boulder: 'v5'
+	boulder: 'v5',
+	image: 'http://i.imgur.com/tI5cMYL.png'
 	)
 User.create(
 	name: 'Sera', 
@@ -48,7 +51,8 @@ User.create(
 	gym: 'Dogpatch',
 	top_rope: '10c',
 	lead: '10a',	
-	boulder: 'v1'
+	boulder: 'v1',
+	image: 'http://i.imgur.com/KAwNKAA.png'
 	)
 User.create(
 	name: 'Beth', 
@@ -96,8 +100,8 @@ User.create(
 	boulder: 'v0'
 	)
 User.create(
-	name: 'Megan', 
-	email: 'megan@ga.com',
+	name: 'Luke', 
+	email: 'luke@ga.com',
 	password: '123456',
 	gym: 'Panet Granite',
 	top_rope: '10c',
