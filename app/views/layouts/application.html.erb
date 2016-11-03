@@ -17,16 +17,16 @@
 
   <body>
 
-    <% if user_signed_in? %>
-    <% end %>
-
-
-
+    <ul class="nav navbar-nav pull-left">
+      <% if user_signed_in? %>
+      <% end %>
+    </ul>
     <ul class="nav navbar-nav pull-right">
         <% if user_signed_in? %>
+          <%= link_to "Profile", edit_user_registration_path, :method => :get, class: "btn btn-default"%>
 
           <%= link_to "Community", dashboard_index_path, :method => :get, class: "btn btn-default nav_link"%>
-          <%= link_to "Inbox", mailbox_inbox_path, :method => :get, class: "btn btn-default nav_link"%>
+          <%= link_to "Inbox", conversations_path, :method => :get, class: "btn btn-default nav_link"%>
           <%= link_to "Log out", destroy_user_session_path, :method => :delete, class: "btn btn-default nav_link" %>
         <% else %>
             <%= form_for(:user, :url => session_path(:user), html: { class: "navbar-form navbar-right form-inline" }) do |f| %>
