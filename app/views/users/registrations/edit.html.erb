@@ -1,45 +1,134 @@
 <div class="container">
   <div class="row">
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+    <div class="col-lg-4">
+      <h2>Edit Your Profile</h2>
+       <%= image_tag @user.avatar.url(:thumb) %>
+        <div class="col-md-8">
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
 
-<%= form_for @user, html: { method: :put, mutlipart: true } do |f| %>
-  <%= devise_error_messages! %>
-  <%= f.label :avatar %>
-  <%= f.file_field :avatar %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+        <%= devise_error_messages! %>
+        <%= f.label :avatar %>  
+        <%= f.file_field :avatar %>
+        <div class="field">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true %>
+        </div>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+          <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+        <% end %>
 
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
-  </div>
+        <div class="field">
+          <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+          <%= f.password_field :password, autocomplete: "off" %>
+          <% if @minimum_password_length %>
+            <br />
+            <em><%= @minimum_password_length %> characters minimum</em>
+          <% end %>
+        </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
+        <div class="field">
+          <%= f.label :password_confirmation %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "off" %>
+        </div>
 
-  <div class="field">
-    <%= f.label :current_password %> <i>(current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %>
-  </div>
-  <br/>
+        <div class="field">
+          <%= f.label :current_password %> <i>(current password to confirm your changes)</i><br />
+          <%= f.password_field :current_password, autocomplete: "off" %>
+        </div>
+        <br/>
+        <div class="row">
+          <div class="actions">
+            <%= f.submit "Update", class: "btn btn-default" %>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <h2>What is your home gym?</h2>
+            <div class="field">
+                <%= f.radio_button(:gym, "gym1") %>
+                <%= f.label(:gym, "Planet Granite", :value => "planet granite") %>
+              <br/>
+            </div>
+            <div class="field">
+                <%= f.radio_button(:gym, "gym2") %>
+                <%= f.label(:gym, "Mission Cliffs", :value => "mission cliffs") %>
+              <br/>
+            </div>
+            <div class="field">
+                <%= f.radio_button(:gym, "gym3") %>
+                <%= f.label(:gym, "Dogpatch", :value => "dogpatch") %>
+            </div>
+                <%= f.submit "Save", class: "btn btn-default" %>
+          </div>
+        </div>
+      </div>
+
+
   <div class="row">
-    <div class="actions">
-      <%= f.submit "Update", class: "btn btn-default" %>
+    <div class="col-lg-4">
+    <h2>Choose Your Skill Level</h2>
+    <hr/>
+
+    <div class="row">
+      <div class="col-lg-8 routes">
+        <h3>Top Rope</h3>
+          <select id="slct1" class="browser-default" name=user[top_rope] onchange="populate(this.id, '">
+            <option value="" disabled selected>Choose your option</option>
+            <option value="5.8">5.8</option>
+            <option value="5.9">5.9</option>
+            <option value="5.10a">5.10a</option>
+            <option value="5.10b">5.10b</option>
+            <option value="3">5.10c</option>
+            <option value="3">5.10d</option>
+            <option value="3">5.11a</option>
+            <option value="3">5.11b</option>
+            <option value="3">5.11c</option>
+            <option value="3">5.11d</option>
+          </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-8 routes">
+        <h3>Lead</h3>
+          <select id="slct1" class="browser-default" onchange="populate(this.id, '">
+            <option value="" disabled selected>Choose your option</option>
+            <option value="1">5.8</option>
+            <option value="2">5.9</option>
+            <option value="3">5.10a</option>
+            <option value="3">5.10b</option>
+            <option value="3">5.10c</option>
+            <option value="3">5.10d</option>
+            <option value="3">5.11a</option>
+            <option value="3">5.11b</option>
+            <option value="3">5.11c</option>
+            <option value="3">5.11d</option>
+          </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-8 routes">
+        <h3>Boulder</h3>
+          <select class="browser-default">
+            <option value="" disabled selected>Choose your option</option>
+            <option value="1">v0</option>
+            <option value="2">v1</option>
+            <option value="3">v2</option>
+            <option value="3">v3</option>
+            <option value="3">v4</option>
+            <option value="3">v5</option>
+            <option value="3">v6</option>
+            <option value="3">v7</option>
+            <option value="3">v8</option>
+            <option value="3">v9</option>
+          </select>
+      </div>
+      <%= f.submit "Save", class: "btn btn-default" %>
     </div>
   </div>
-  <% end %>
+</div>
+<% end %>
+
 
 <%= link_to "Back", :back %>
 
