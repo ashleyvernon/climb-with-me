@@ -1,17 +1,20 @@
 <div class="container">
 	<div class="row" id="community_row">
-		<h1 id="community_title">Meet a new climbing buddy!</h1>
+		<h1 id="community_title">Find your new climbing buddy!</h1>
 		<br/>
 			<% @users.each do |user| %>
 			<div class="col-md-4">
 
 				<img class="media-object" src="http://placehold.it/125x125" alt="Circular Image">
-				<%= image_tag @user.avatar.url(:thumb) %>
-		        <%= link_to user.name, user_path(user) %>
+
+		        <%= link_to user.name, user_path(user), :id => "user_name"%>
 		        <br/>
-		        <%= user.gym %>
+		        <h5 class="attribute"><%= user.gym %></h5>
+		        <h5 class="attribute">Top Rope: <%= user.top_rope %></h5>
+		        <h5 class="attribute">Lead: <%= user.lead %></h5>
+		        <h5 class="attribute">Boulder: <%= user.boulder %></h5>
 		        <br/>
-				<%= link_to "Compose", new_conversation_path, class: "btn btn-default" %>
+				<%= link_to "Message", new_conversation_path, class: "btn btn-default" %>
 
 			</div>
 			<% end %>
