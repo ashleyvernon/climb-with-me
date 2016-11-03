@@ -35,13 +35,30 @@
 	padding-top: 5px;	
 }
 
+.btn {
+	padding: 7px 29px;
+	font-size: 20px;
+}
+
 #community_row {
     margin-right: -129px;
     margin-left: 50px;
 }
 
 #community_title {
-    margin-left: 328px;
+    margin-left: 230px;
+	font-family: 'Amatic SC', cursive;
+	font-size: 80px;
+}
+
+#user_name {
+	font-family: 'Amatic SC', cursive;
+	
+	text-align: center;
+}
+.attribute {
+	font-family: 'Amatic SC', cursive;
+	font-size: 20px;	
 }
 
 a {
@@ -94,7 +111,29 @@ a {
 	font-size: 42px;
     padding-left: 92px;
 }
+#gym_choice {
+	font-family: 'Amatic SC', cursive;
+	font-size: 36px;
+}
 
+.gym {
+	font-family: 'Amatic SC', cursive;
+	font-size: 30px;
+}
+#sign_up_form {
+	font-family: 'Amatic SC', cursive;
+	font-size: 50px;	
+}
+.sign_up {
+	font-family: 'Amatic SC', cursive;
+	font-size: 30px;	
+}
+.submit {
+	font-family: 'Amatic SC', cursive;
+	font-size: 75px;
+	padding: 7px 29px !important;
+
+}
 #conversation_form {
     margin-left: 400px;
 }
@@ -113,4 +152,5 @@ a {
 
 .routes {
 	text-align: center;
+    margin-top: -35px;
 }
