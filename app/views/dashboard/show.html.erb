@@ -2,6 +2,7 @@
 	<div class="row">
 			<h1>Welcome <%= user.name %></h1>
         <img id="profile-photo" class="circle responsive-img" src="http://placehold.it/250x250">
+        <%= image_tag @user.avatar.url(:medium) %>
 	</div>
 </div>
 
@@ -15,17 +16,17 @@
   <div class="col-lg-4">
     <div class="field">
         <%= f.radio_button(:gym, "gym1") %>
-        <%= f.label(:gym, "Planet Granite") %>
+        <%= f.label(:gym, "Planet Granite"), :value => "planet granite" %>
       <br/>
     </div>
     <div class="field">
         <%= f.radio_button(:gym, "gym2") %>
-        <%= f.label(:gym, "Mission Cliffs") %>
+        <%= f.label(:gym, "Mission Cliffs"), :value => "mission cliffs" %>
       <br/>
     </div>
     <div class="field">
         <%= f.radio_button(:gym, "gym3") %>
-        <%= f.label(:gym, "Dogpatch") %>
+        <%= f.label(:gym, "Dogpatch"), :value => "dogpatch" %>
     </div>
   </div>
   </div>

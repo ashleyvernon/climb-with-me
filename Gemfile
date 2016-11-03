@@ -30,6 +30,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'mailboxer', github: 'mailboxer/mailboxer'
 gem 'chosen-rails'
+gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
+
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

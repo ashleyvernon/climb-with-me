@@ -28,6 +28,23 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
   <br/>
+        <div class="col-md-4">
+          <h2>What is your home gym?</h2>
+            <div class="field">
+                <%= f.radio_button(:gym, "Planet Granite") %>
+                <%= f.label(:gym, "Planet Granite", :value => "planet granite") %>
+              <br/>
+            </div>
+            <div class="field">
+                <%= f.radio_button(:gym, "Mission Cliffs") %>
+                <%= f.label(:gym, "Mission Cliffs", :value => "mission cliffs") %>
+              <br/>
+            </div>
+            <div class="field">
+                <%= f.radio_button(:gym, "Dogpatch") %>
+                <%= f.label(:gym, "Dogpatch", :value => "dogpatch") %>
+            </div>
+          <br/>
   <div class="actions">
     <%= f.submit "Sign up", class: "btn btn-default" %>
   </div>

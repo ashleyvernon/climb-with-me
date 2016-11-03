@@ -1,11 +1,12 @@
 <div class="container">
 	<div class="row" id="community_row">
-		<h1 id="community_title">Make a new friend!</h1>
+		<h1 id="community_title">Meet a new climbing buddy!</h1>
 		<br/>
 			<% @users.each do |user| %>
 			<div class="col-md-4">
 
 				<img class="media-object" src="http://placehold.it/125x125" alt="Circular Image">
+				<%= image_tag @user.avatar.url(:thumb) %>
 		        <%= link_to user.name, user_path(user) %>
 		        <br/>
 		        <%= user.gym %>
