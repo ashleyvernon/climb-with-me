@@ -18,15 +18,98 @@ User.create(
 	name: 'Ashley', 
 	email: 'ashley@ga.com',
 	password: '123456',
-	gym: 'Panet Granite'
+	gym: 'Mission Cliffs', 
+	top_rope: '10c',
+	lead: '10a',	
+	boulder: 'v1'
+	)
+User.create(
+	name: 'Chrissy', 
+	email: 'chrissy@ga.com',
+	password: '123456',
+	gym: 'Dogpatch',
+	top_rope: '10d',
+	lead: '10b',
+	boulder: 'v0'
+	)
+User.create(
+	name: 'Oliver', 
+	email: 'oliver@ga.com',
+	password: '123456',
+	gym: 'Panet Granite',
+	top_rope: '11b',
+	lead: '10d',
+	boulder: 'v5'
+	)
+User.create(
+	name: 'Sera', 
+	email: 'sera@ga.com',
+	password: '123456',
+	gym: 'Dogpatch',
+	top_rope: '10c',
+	lead: '10a',	
+	boulder: 'v1'
+	)
+User.create(
+	name: 'Beth', 
+	email: 'beth@ga.com',
+	password: '123456',
+	gym: 'Panet Granite',
+	top_rope: '10d',
+	lead: '10b',
+	boulder: 'v0'
+	)
+User.create(
+	name: 'Junior', 
+	email: 'junior@ga.com',
+	password: '123456',
+	gym: 'Mission Cliffs',
+	top_rope: '10d',
+	lead: '10b',
+	boulder: 'v3'
+	)
+User.create(
+	name: 'Gabriella', 
+	email: 'gabriella@ga.com',
+	password: '123456',
+	gym: 'Dogpatch',
+	top_rope: '10c',
+	lead: '10a',	
+	boulder: 'v1'
+	)
+User.create(
+	name: 'Nathan', 
+	email: 'nathan@ga.com',
+	password: '123456',
+	gym: 'Panet Granite',
+	top_rope: '11b',
+	lead: '10d',
+	boulder: 'v5'
+	)
+User.create(
+	name: 'Mercedes', 
+	email: 'mercedes@ga.com',
+	password: '123456',
+	gym: 'Mission Cliffs',
+	top_rope: '10d',
+	lead: '10b',
+	boulder: 'v0'
+	)
+User.create(
+	name: 'Megan', 
+	email: 'megan@ga.com',
+	password: '123456',
+	gym: 'Panet Granite',
+	top_rope: '10c',
+	lead: '10a',	
+	boulder: 'v1'
 	)
 
-
-10.times do
-	User.create(
-		name: FFaker::Name.name,
-		email: FFaker::Internet.email,
-		password: '123456',
-		gym: 'Panet Granite'
-		)
-end
+# 10.times do
+# 	User.create(
+# 		name: FFaker::Name.name,
+# 		email: FFaker::Internet.email,
+# 		password: '123456',
+# 		gym: 'Panet Granite'
+# 		)
+# end
