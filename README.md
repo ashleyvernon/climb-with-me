@@ -1,6 +1,6 @@
 # Climb With Me
 <hr>
-An app that allows rock climbers to connect with other rock climbers based on gym and style and level of climbing.s
+An app that allows rock climbers to connect with other rock climbers based on gym and style and level of climbing.
 
 
 ![Imgur](http://i.imgur.com/FRC1y6a.png) 
@@ -23,5 +23,5 @@ An app that allows rock climbers to connect with other rock climbers based on gy
 * WDI 31, you guys rock!!  
 
 
-# climb-with-me
+
 
