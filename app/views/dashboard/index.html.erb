@@ -1,22 +1,36 @@
 <div class="container">
+	<div class="row" id="nav_links">
+	<div class="row" id="row1">
+		<div class="col-md-3">
+			<%= image_tag "climb10.png", :class => "image_1" %>
+		</div>
+		<div class="col-md-3">
+			<%= image_tag "climb12.png", :class => "image_2" %>
+		</div>
+		<div class="col-md-3">
+			<%= image_tag "climb14.png", :class => "image_3" %>
+		</div>
+		<div class="col-md-3">
+			<%= image_tag "climb9.png", :class => "image_4" %>
+		</div>
+	</div>
+
 	<div class="row" id="community_row">
 		<h1 id="community_title">Find your new climbing buddy!</h1>
 		<br/>
 			<% @users.each do |user| %>
-			<div class="col-md-4">
-
-				<img class="media-object" src="http://placehold.it/125x125" alt="Circular Image">
-
+			<div class="col-md-3">
+			<%= image_tag "climb11.png", :class => "image img-circle" %>
+				<br/>
 		        <%= link_to user.name, user_path(user), :id => "user_name"%>
 		        <br/>
 		        <h5 class="attribute"><%= user.gym %></h5>
 		        <h5 class="attribute">Top Rope: <%= user.top_rope %></h5>
 		        <h5 class="attribute">Lead: <%= user.lead %></h5>
 		        <h5 class="attribute">Boulder: <%= user.boulder %></h5>
-		        <br/>
-				<%= link_to "Message", new_conversation_path, class: "btn btn-default" %>
-
+				<%= link_to "Message", new_conversation_path, :class => "message" %>
+				<br/>
 			</div>
-			<% end %>
+		<% end %>
 	</div>
 </div>

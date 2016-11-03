@@ -53,17 +53,25 @@
 
 #user_name {
 	font-family: 'Amatic SC', cursive;
-	
+    padding-left: 36px;
 	text-align: center;
 }
 .attribute {
 	font-family: 'Amatic SC', cursive;
-	font-size: 20px;	
+	font-size: 20px;
+    padding-left: 25px;	
 }
 
+.panel-body {
+    margin-right: -104px;
+}
 a {
 	color: #b75a33;
 	font-size: 27px;
+}
+
+h2 {
+	color: #984B43;
 }
 
 .image_1 {
@@ -101,6 +109,44 @@ a {
 .image_10 {
 	height: 175px;
 }
+.image {
+    height: 98px !important;
+}
+.image_13 {
+	height: 175px;
+	padding-left: 48%;
+	margin-top: 17px;
+	margin-bottom: 28px;
+}
+.image_15 {
+	height: 175px;
+	margin-top: 15px;
+	margin-left: 69px;
+}
+.image_10 {
+	height: 175px;
+	padding-left: 76px;
+}
+.image_25 {
+	height: 175px;
+}
+.image_17 {
+	height: 175px;
+	padding-left: 70px;
+}
+.image_16 {
+	height: 175px;
+    padding-left: 280px;
+}
+
+#quote {
+	font-size: 50px;
+	font-weight: bold;
+	color: orange;
+	text-align: center;
+	font-family: 'Amatic SC', cursive;
+}
+
 #title {
 	font-family: 'Amatic SC', cursive;
     font-size: 100px;
@@ -114,16 +160,25 @@ a {
 #gym_choice {
 	font-family: 'Amatic SC', cursive;
 	font-size: 36px;
+	font-weight: bold;
 }
 
 .gym {
 	font-family: 'Amatic SC', cursive;
 	font-size: 30px;
+	font-weight: bold;
 }
 #sign_up_form {
 	font-family: 'Amatic SC', cursive;
-	font-size: 50px;	
+	font-size: 50px;
 }
+
+.submit_profile {
+	font-family: 'Amatic SC', cursive;
+	font-size: 50px !important;	
+	color: orange !important;
+}
+
 .sign_up {
 	font-family: 'Amatic SC', cursive;
 	font-size: 30px;	
@@ -134,23 +189,45 @@ a {
 	padding: 7px 29px !important;
 
 }
+.user_profile_name {
+	font-family: 'Amatic SC', cursive;
+	font-size: 75px;
+	color: orange;
+}
+
+#gym_profile {
+	font-color: brown;
+}
+
 #conversation_form {
     margin-left: 400px;
 }
 
+
+.message {
+	font-family: 'Amatic SC', cursive;
+	font-size: 30px;	
+	color: orange;
+	padding-left: 33px;	
+}
 #inbox {
     padding-top: 50px;
 }
 
 #entire_conversation {
-    padding-top: 50px;
+    padding-top: 60px;
+    margin-left: 200px;
 }
 
 #nav_links {
 	margin-top: 10px;
 }
 
+#user_email {
+	font-size: 21px;
+}
+#user_password {
+	font-size: 21px;
+}
 .routes {
 	text-align: center;
-    margin-top: -35px;
-}

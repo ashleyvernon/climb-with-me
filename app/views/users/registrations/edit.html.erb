@@ -1,12 +1,12 @@
+<div class="row" id="nav_links">
 <div class="container">
   <center><h2 id="sign_up_form">Editing my Profile!</h2></center>
   <div class="row">
     <div class="col-lg-4">
-       <%= image_tag @user.avatar.url(:thumb) %>
+
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
 
         <%= devise_error_messages! %>
-        <%= f.file_field :avatar %>
         <div class="field">
           <%= f.label :email, :class => "sign_up" %><br />
           <%= f.email_field :email, autofocus: true %>
@@ -35,6 +35,8 @@
           <%= f.password_field :current_password, autocomplete: "off" %>
         </div>
         <br/>
+        <%= f.file_field :avatar %>
+       <%= image_tag @user.avatar.url(:thumb, :height => 400, :width => 400) %>
 
     </div>
         <div class="col-md-4">
@@ -53,7 +55,6 @@
                 <%= f.radio_button(:gym, "gym3") %>
                 <%= f.label(:gym, "Dogpatch", :value => "dogpatch", :class => "sign_up") %>
             </div>
-                <%= f.submit "Save", class: "btn btn-default submit" %>
           </div>
 
     <div class="col-lg-4">
@@ -118,7 +119,7 @@
     </div>
         <div class="row">
           <div class="actions">
-            <%= f.submit "Update", class: "btn btn-default submit" %>
+            <center><%= f.submit "Update", class: "btn btn-default submit_profile" %></center>
           </div>
         </div>
 

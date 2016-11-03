@@ -1,26 +1,27 @@
-# README
+# Climb With Me
+<hr>
+An app that allows rock climbers to connect with other rock climbers based on gym and style and level of climbing.s
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+![Imgur](http://i.imgur.com/FRC1y6a.png) 
 
-* Ruby version
+#Code I am Proud, Conversation Controller:
 
-* System dependencies
+![Imgur](http://i.imgur.com/Wf0m92x.png)
 
-* Configuration
+#View 
 
-* Database creation
+![Imgur](http://i.imgur.com/tWu5uOb.png)
 
-* Database initialization
+#Let's now talk about this:
 
-* How to run the test suite
+![Imgur](http://i.imgur.com/vMJNhdG.png)
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## Acknowledgments
 
-* ...
+* WDI 31, you guys rock!!  
+
+
 # climb-with-me
 
