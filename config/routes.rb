@@ -12,6 +12,10 @@ Rails.application.routes.draw do
 	get "mailbox/sent" => "mailbox#sent", as: :mailbox_sent
 	get "mailbox/trash" => "mailbox#trash", as: :mailbox_trash
 
+	get "messages/inbox" => "message#inbox"
+	get "messages/create/:to_id" => "message#create_get"
+	post "messages/create/:to_id" => "message#create_post"
+
 	#conversations
 	resources :conversations do
 		member do
