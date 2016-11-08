@@ -18,7 +18,6 @@ User.create(
 	name: 'Ashley', 
 	email: 'ashley@ga.com',
 	password: '123456',
-	gym: 'Mission Cliffs', 
 	top_rope: '10c',
 	lead: '10a',	
 	boulder: 'v1',
