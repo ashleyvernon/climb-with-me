@@ -224,10 +224,20 @@ h2 {
 
 #user_email {
 	font-size: 21px;
+	font-family: 'Amatic SC', cursive;
 }
 #user_password {
 	font-size: 21px;
 }
+#user_name {
+	font-size: 21px;
+}
+#user_password_confirmation {
+	font-size: 21px;
+}
 .routes {
 	text-align: center;
+}
+input {
+	font-family: 'Amatic SC', cursive;
 }

@@ -4,19 +4,14 @@ class UsersController < ApplicationController
 		
 	end
 
-	def new
-		@user = User.new
-
-	end
-
-	def create 
-		@user = User.create(user_params)
-		login(@user)
-		if @user.save
-			redirect_to @user
-		end
+	# def create 
+	# 	@user = User.create(user_params)
+	# 	login(@user)
+	# 	if @user.save
+	# 		redirect_to @user
+	# 	end
 		
-	end
+	# end
 
 	def show 
 		user_id = params[:id]

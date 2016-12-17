@@ -2,8 +2,8 @@ Rails.application.routes.draw do
 	default_url_options :host => "example.com"
 	
   	devise_for :users
-  	
 	resources :users, :controller => 'users'
+  	
 	resources :dashboard
 
 	root to: "home#index"
