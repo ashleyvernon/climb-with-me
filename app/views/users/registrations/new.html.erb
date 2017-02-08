@@ -1,5 +1,5 @@
 <div class="container">
-<center><h2 id="sign_up_form">Let's Create Your Profile</h2></center>
+  <center><h2 id="sign_up_form">Let's Create Your Profile</h2></center>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= devise_error_messages! %>
   <div class="row">
@@ -27,33 +27,37 @@
         <%= f.password_field :password_confirmation, autocomplete: "off" %>
       </div>
     </div> 
-    <div class="col-sm-4">
+
+    <div class="col-sm-4" id="middle-column">
       <h5 id="gym_choice">Where do you climb the most?</h5>
-      <div class="field">
+      <div class="gym-field">
         <%= f.radio_button(:gym, "Planet Granite") %>
         <%= f.label(:gym, "Planet Granite", :value => "planet granite", :class => "gym") %>
         <br/>
       </div>
-      <div class="field">
+      <div class="gym-field">
         <%= f.radio_button(:gym, "Mission Cliffs") %>
         <%= f.label(:gym, "Mission Cliffs", :value => "mission cliffs", :class => "gym") %>
         <br/>
       </div>
-      <div class="field">
+      <div class="gym-field">
           <%= f.radio_button(:gym, "Dogpatch") %>
           <%= f.label(:gym, "Dogpatch", :value => "dogpatch", :class => "gym") %>
       </div>
     </div>
-    <div class="col-sm-4" id="route_column">
-      <h5 id="sign_up_form">Top Rope</h5>
+    <div class="col-sm-4" id="right-column">
+      <h5 class="climb-style">Top Rope</h5>
         <%= f.select(:top_rope, options_for_select([['Choose your option', ''], ['5.8', '5.8'], ['5.9', '5.9'], ['5.10a', '5.10a'], ['5.10b', '5.10b'], ['5.10c', '5.10c'], ['5.10d', '5.10d'], ['5.11a', '5.11a'], ['5.11b', '5.11b'], ['5.11c', '5.11c'], ['5.11d', '5.11d'], ['5.12a', '5.12a'], ['5.12b', '5.12b']])) %>
-      <h5 id="sign_up_form">Lead</h5>
+      <h5 class="climb-style">Lead</h5>
         <%= f.select(:lead, options_for_select([['Choose your option', ''], ['5.8', '5.8'], ['5.9', '5.9'], ['5.10a', '5.10a'], ['5.10b', '5.10b'], ['5.10c', '5.10c'], ['5.10d', '5.10d'], ['5.11a', '5.11a'], ['5.11b', '5.11b'], ['5.11c', '5.11c'], ['5.11d', '5.11d'], ['5.12a', '5.12a'], ['5.12b', '5.12b']])) %>
-      <h5 id="sign_up_form">Boulder</h5>
+      <h5 class="climb-style">Boulder</h5>
             <%= f.select(:boulder, options_for_select([['Choose your option', ''], ['v0', 'v0'], ['v1', 'v1'], ['v2', 'v2'], ['v3', 'v3'], ['v4', 'v4'], ['v5', 'v5'], ['v6', 'v6'], ['v7', 'v7'], ['v8', 'v8'], ['v9', 'v9'], ['v10', 'v10'], ['v11', 'v11']])) %>
     </div>
     <%= render "users/shared/links" %>
   </div>
-  <%= f.submit "Sign up", :class => "btn btn-default submit" %>
+  <br/>
+  <div class="col-md-12">
+  <%= f.submit "Sign up", :class => "btn btn-default submit_profile" %>
+  </div>
   <% end %>
 </div>

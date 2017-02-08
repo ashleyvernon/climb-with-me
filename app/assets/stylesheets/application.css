@@ -21,35 +21,31 @@
 	margin-bottom: 10px;
 	padding: 10px;
 }
-
 .container {
 	padding: 80px;
 }
-
 .nav {
 	padding-right: 7px;
 }
-
 .nav_link {
 	padding-top: 5px;	
 }
-
+#nav_links {
+	margin-top: 10px;
+}
 .btn {
 	padding: 7px 29px;
 	font-size: 20px;
 }
-
 #community_row {
     margin-right: -129px;
     margin-left: 50px;
 }
-
 #community_title {
     margin-left: 230px;
 	font-family: 'Amatic SC', cursive;
 	font-size: 80px;
 }
-
 #user_name {
 	font-family: 'Amatic SC', cursive;
     padding-left: 36px;
@@ -60,7 +56,6 @@
 	font-size: 20px;
     padding-left: 25px;	
 }
-
 .panel-body {
     margin-right: -104px;
 }
@@ -68,11 +63,9 @@ a {
 	color: #b75a33;
 	font-size: 27px;
 }
-
 h2 {
 	color: #984B43;
 }
-
 .image_1 {
 	height: 175px;
 }
@@ -137,7 +130,6 @@ h2 {
 	height: 175px;
     padding-left: 280px;
 }
-
 #quote {
 	font-size: 50px;
 	font-weight: bold;
@@ -145,7 +137,6 @@ h2 {
 	text-align: center;
 	font-family: 'Amatic SC', cursive;
 }
-
 #title {
 	font-family: 'Amatic SC', cursive;
     font-size: 93px;
@@ -161,7 +152,10 @@ h2 {
 	font-size: 36px;
 	font-weight: bold;
 }
-
+.gym-field {
+	padding-left: 60px;
+	padding-top: 18px;
+}
 .gym {
 	font-family: 'Amatic SC', cursive;
 	font-size: 30px;
@@ -170,14 +164,39 @@ h2 {
 #sign_up_form {
 	font-family: 'Amatic SC', cursive;
 	font-size: 50px;
+	font-weight: bold;
+    padding-bottom: 44px;
 }
-
+#edit_form {
+	font-family: 'Amatic SC', cursive;
+	font-size: 50px;
+	font-weight: bold;
+    padding-bottom: 44px;
+    margin-top: 7px;
+    margin-left: -106px;
+}
+.climb-style {
+	font-family: 'Amatic SC', cursive;
+	font-size: 50px;
+}
+#right-column {
+	padding-left: 147px;
+}
+#middle-column {
+    padding-left: 45px;
+}
 .submit_profile {
 	font-family: 'Amatic SC', cursive;
 	font-size: 50px !important;	
 	color: orange !important;
+	margin-left: 466px;
 }
-
+.update_profile {
+	font-family: 'Amatic SC', cursive;
+	font-size: 50px !important;	
+	color: orange !important;
+	margin-left: 480px;
+}
 .sign_up {
 	font-family: 'Amatic SC', cursive;
 	font-size: 30px;	
@@ -186,23 +205,21 @@ h2 {
 	font-family: 'Amatic SC', cursive;
 	font-size: 75px;
 	padding: 7px 29px !important;
-
+}
+.back {
+	font-size: 45px;
 }
 .user_profile_name {
 	font-family: 'Amatic SC', cursive;
 	font-size: 75px;
 	color: orange;
 }
-
 #gym_profile {
 	font-color: brown;
 }
-
 #conversation_form {
     margin-left: 400px;
 }
-
-
 .message {
 	font-family: 'Amatic SC', cursive;
 	font-size: 30px;	
@@ -212,16 +229,10 @@ h2 {
 #inbox {
     padding-top: 50px;
 }
-
 #entire_conversation {
     padding-top: 60px;
     margin-left: 200px;
 }
-
-#nav_links {
-	margin-top: 10px;
-}
-
 #user_email {
 	font-size: 21px;
 	font-family: 'Amatic SC', cursive;
@@ -235,6 +246,9 @@ h2 {
 #user_password_confirmation {
 	font-size: 21px;
 }
+#user_current_password {
+	font-size: 21px;
+}
 .routes {
 	text-align: center;
 }
@@ -242,6 +256,10 @@ input {
 	font-family: 'Amatic SC', cursive;
 }
 em {
+	font-family: 'Amatic SC', cursive;
+	font-size: 21px;
+}
+i {
 	font-family: 'Amatic SC', cursive;
 	font-size: 21px;
 }
