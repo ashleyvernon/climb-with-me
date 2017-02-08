@@ -1,108 +1,59 @@
 <div class="container">
 <center><h2 id="sign_up_form">Let's Create Your Profile</h2></center>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
   <div class="row">
-    <div class="col-md-4">
-
-      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-        <%= devise_error_messages! %>
-
-        <div class="field">
-          <%= f.label :name, :class => "sign_up" %><br />
-          <%= f.text_field :name, autofocus: true %>
-        </div>
-
-        <div class="field">
-          <%= f.label :email, :class => "sign_up" %><br />
-          <%= f.email_field :email, autofocus: true %>
-        </div>
-
-        <div class="field">
-          <%= f.label :password, :class => "sign_up"  %>
-          <% if @minimum_password_length %>
-          <em>(<%= @minimum_password_length %> characters minimum)</em>
-          <% end %>
-          <br/>
-          <%= f.password_field :password, autocomplete: "off" %>
-        </div>
-
-        <div class="field">
-          <%= f.label :password_confirmation, :class => "sign_up"  %><br />
-          <%= f.password_field :password_confirmation, autocomplete: "off" %>
-        </div>
+    <div class="col-sm-4">
+      <div class="field">
+        <%= f.label :name, :class => "sign_up" %>
         <br/>
-
-      </div> 
-
-        <div class="col-md-4">
-          <h5 id="gym_choice">Where do you climb the most?</h5>
-            <div class="field">
-                <%= f.radio_button(:gym, "Planet Granite") %>
-                <%= f.label(:gym, "Planet Granite", :value => "planet granite", :class => "gym") %>
-              <br/>
-            </div>
-            <div class="field">
-                <%= f.radio_button(:gym, "Mission Cliffs") %>
-                <%= f.label(:gym, "Mission Cliffs", :value => "mission cliffs", :class => "gym") %>
-              <br/>
-            </div>
-            <div class="field">
-                <%= f.radio_button(:gym, "Dogpatch") %>
-                <%= f.label(:gym, "Dogpatch", :value => "dogpatch", :class => "gym") %>
-            </div>
-        </div>
+        <%= f.text_field :name, autofocus: true %>
+      </div>
+      <div class="field">
+        <%= f.label :email, :class => "sign_up" %>
         <br/>
-
-        <div class="col-md-4" id="route_column">
-          <div class="row">
-            <div class="col-lg-8 routes">
-              <h3 id="sign_up_form">Top Rope</h3>
-                <%= f.select(:top_rope, options_for_select([['Choose your option', ''], ['5.8', '5.8'], ['5.9', '5.9'], ['5.10a', '5.10a'], ['5.10b', '5.10b'], ['5.10c', '5.10c'], ['5.10d', '5.10d'], ['5.11a', '5.11a'], ['5.11b', '5.11b'], ['5.11c', '5.11c'], ['5.11d', '5.11d'], ['5.12a', '5.12a'], ['5.12b', '5.12b']])) %>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-8 routes">
-              <h3 id="sign_up_form">Lead</h3>
-                <select id="slct1" class="browser-default" onchange="this.form.submit()">
-                  <option value="" disabled selected>Choose your option</option>
-                  <option value="5.8">5.8</option>
-                  <option value="5.9">5.9</option>
-                  <option value="5.10a">5.10a</option>
-                  <option value="5.10b">5.10b</option>
-                  <option value="5.10c">5.10c</option>
-                  <option value="5.10d">5.10d</option>
-                  <option value="5.11a">5.11a</option>
-                  <option value="5.11b">5.11b</option>
-                  <option value="5.11c">5.11c</option>
-                  <option value="5.11d">5.11d</option>
-                </select>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-8 routes">
-              <h3 id="sign_up_form">Boulder</h3>
-                <select class="browser-default" onchange="this.form.submit()">
-                  <option value="" disabled selected>Choose your option</option>
-                  <option value="v0">v0</option>
-                  <option value="v1">v1</option>
-                  <option value="v2">v2</option>
-                  <option value="v3">v3</option>
-                  <option value="v4">v4</option>
-                  <option value="v5">v5</option>
-                  <option value="v6">v6</option>
-                  <option value="v7">v7</option>
-                  <option value="v8">v8</option>
-                  <option value="v9">v9</option>
-                </select>
-            </div>
-          </div>
-        </div>
-
-        <div class="actions">
-          <%= f.submit "Sign up", class: "btn btn-default submit" %>
-        </div>
-
-      <% end %>
-
-      <%= render "users/shared/links" %>
+        <%= f.email_field :email, autofocus: true %>
+      </div>
+      <div class="field">
+        <%= f.label :password, :class => "sign_up" %>
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %>
+        <br/>
+        <%= f.password_field :password, autocomplete: "off" %>
+      </div>
+      <div class="field">
+        <%= f.label :password_confirmation, :class => "sign_up"  %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off" %>
+      </div>
+    </div> 
+    <div class="col-sm-4">
+      <h5 id="gym_choice">Where do you climb the most?</h5>
+      <div class="field">
+        <%= f.radio_button(:gym, "Planet Granite") %>
+        <%= f.label(:gym, "Planet Granite", :value => "planet granite", :class => "gym") %>
+        <br/>
+      </div>
+      <div class="field">
+        <%= f.radio_button(:gym, "Mission Cliffs") %>
+        <%= f.label(:gym, "Mission Cliffs", :value => "mission cliffs", :class => "gym") %>
+        <br/>
+      </div>
+      <div class="field">
+          <%= f.radio_button(:gym, "Dogpatch") %>
+          <%= f.label(:gym, "Dogpatch", :value => "dogpatch", :class => "gym") %>
+      </div>
+    </div>
+    <div class="col-sm-4" id="route_column">
+      <h5 id="sign_up_form">Top Rope</h5>
+        <%= f.select(:top_rope, options_for_select([['Choose your option', ''], ['5.8', '5.8'], ['5.9', '5.9'], ['5.10a', '5.10a'], ['5.10b', '5.10b'], ['5.10c', '5.10c'], ['5.10d', '5.10d'], ['5.11a', '5.11a'], ['5.11b', '5.11b'], ['5.11c', '5.11c'], ['5.11d', '5.11d'], ['5.12a', '5.12a'], ['5.12b', '5.12b']])) %>
+      <h5 id="sign_up_form">Lead</h5>
+        <%= f.select(:lead, options_for_select([['Choose your option', ''], ['5.8', '5.8'], ['5.9', '5.9'], ['5.10a', '5.10a'], ['5.10b', '5.10b'], ['5.10c', '5.10c'], ['5.10d', '5.10d'], ['5.11a', '5.11a'], ['5.11b', '5.11b'], ['5.11c', '5.11c'], ['5.11d', '5.11d'], ['5.12a', '5.12a'], ['5.12b', '5.12b']])) %>
+      <h5 id="sign_up_form">Boulder</h5>
+            <%= f.select(:boulder, options_for_select([['Choose your option', ''], ['v0', 'v0'], ['v1', 'v1'], ['v2', 'v2'], ['v3', 'v3'], ['v4', 'v4'], ['v5', 'v5'], ['v6', 'v6'], ['v7', 'v7'], ['v8', 'v8'], ['v9', 'v9'], ['v10', 'v10'], ['v11', 'v11']])) %>
+    </div>
+    <%= render "users/shared/links" %>
   </div>
+  <%= f.submit "Sign up", :class => "btn btn-default submit" %>
+  <% end %>
 </div>
